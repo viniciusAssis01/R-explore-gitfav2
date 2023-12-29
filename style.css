@@ -1,0 +1,117 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+:root {
+	font-size: 62.5%;
+	--ff-primary: "Roboto", sans-serif;
+	--txt-placeholder: hsla(240, 6%, 51%, 1);
+	--txt-button: hsla(0, 0%, 100%, 1);
+	--txt-color: #303030;
+	--txt-table: hsla(240, 9%, 89%, 1);
+	--txt-remove: hsla(355, 91%, 66%, 1);
+	--txt-empty-table: hsla(189, 4%, 32%, 1);
+
+	--bg-input: hsla(191, 65%, 7%, 1);
+	--bg-button: hsla(195, 91%, 25%, 1);
+	--bg-tt-collums: hsla(194, 72%, 13%, 1);
+	--bg-row-odd: hsla(195, 61%, 6%, 0.5); /* ou  rgba(6, 22, 27, 0.50);*/
+	--bg-row-pair: hsla(192, 65%, 7%, 1);
+	--bg-body: #000;
+}
+
+body {
+	font-size: 1.6rem;
+	color: var(--txt-table);
+	background-color: var(--bg-body);
+	width: 100vw;
+	height: 100vh;
+}
+body * {
+	font-family: var(--ff-primary);
+}
+
+#app {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+}
+
+#app header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 29.3rem;
+	overflow: hidden;
+}
+
+header img {
+	width: 186px;
+	height: 32px;
+}
+
+.search {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+}
+
+.search input {
+	height: 4.8rem;
+	width: 46.2rem;
+	padding: 1.6rem;
+	border: 2px solid transparent;
+	border-radius: 5px;
+	outline: none;
+	background-color: var(--bg-input);
+	color: var(--txt-placeholder);
+}
+input::placeholder {
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 100%;
+}
+.search input:focus {
+	border: 2px solid var(--bg-button);
+}
+.sr-only {
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	overflow: hidden;
+
+	margin: -1px;
+	padding: 0px;
+	border: 0;
+	appearance: none;
+}
+
+header button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.8rem;
+
+	padding: 1.2rem 3.2rem;
+	border-radius: 0.5rem;
+	border: 1px solid transparent;
+	background-color: var(--bg-button);
+
+	color: var(--txt-button);
+	font-size: 1.4rem;
+	font-weight: 700;
+	line-height: 24px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.search button:hover {
+	filter: brightness(1.1);
+}
+
+button img {
+	width: 2.4rem;
+	height: 2.4rem;
+}
