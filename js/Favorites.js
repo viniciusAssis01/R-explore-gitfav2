@@ -125,7 +125,6 @@ export class FavoritesView extends Favorites {
 				row.querySelector(".user span").textContent = `/ ${user.login}`;
 				row.querySelector("td.repositories").textContent = user.public_repos;
 				row.querySelector("td.followers").textContent = user.followers;
-				//row.querySelector(".followers").textContent = user.followers;
 
 				row.querySelector(".remove").onclick = () => {
 					const isOk = confirm("Tem certeza que deseja remover esse usuario?");
