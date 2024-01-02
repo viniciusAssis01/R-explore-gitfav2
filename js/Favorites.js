@@ -72,7 +72,13 @@ export class FavoritesView extends Favorites {
 		return tr;
 	}
 	removeRowNoFavorites() {
-		this.tbody.querySelector("tr.rowNoFavorites").remove();
+		/* const rowNoFav = this.tbody.querySelector(".rowNoFavorites").remove();
+		rowNoFav.remove();
+		//o remove() ñ funciona */
+
+		this.tbody.querySelectorAll("tr.rowNoFavorites").forEach((tr) => {
+			tr.remove();
+		});
 	}
 
 	createRow() {
